@@ -235,7 +235,7 @@
               "name": "punctuation.definition.keyword"
             },
             "3": {
-              "name": "variable.function variable.other"
+              "name": "variable.function variable.other variable.other.enummember constant.other.symbol"
             }
           }
         },
@@ -432,6 +432,46 @@
           ]
         }
       ]
+    },
+    "variableDeclaration": {
+      "patterns": [
+        {
+          "match": "(?<=external )[a-z_][0-9a-zA-Z_]*",
+          "name": "entity.name.function"
+        },
+        {
+          "match": "(?<=let )[a-z_][0-9a-zA-Z_]*",
+          "name": "entity.name.function"
+        },
+        {
+          "match": "(?<=let rec )[a-z_][0-9a-zA-Z_]*",
+          "name": "entity.name.function"
+        }
+      ]
+    },
+    "typeDeclaration": {
+      "patterns": [
+        {
+          "match": "(?<=type )[a-z_][0-9a-zA-Z_]*",
+          "name": "entity.name.function"
+        },
+        {
+          "match": "(?<=and )[a-z_][0-9a-zA-Z_]*",
+          "name": "entity.name.function"
+        },
+        {
+          "match": "(?<=type rec )[a-z_][0-9a-zA-Z_]*",
+          "name": "entity.name.function"
+        }
+      ]
+    },
+    "recordProperty": {
+      "patterns": [
+        {
+          "name": "variable.object.property",
+          "match": "([a-z_][0-9a-zA-Z_]*(?=:))"
+        }
+      ]
     }
   },
   "patterns": [
@@ -494,6 +534,15 @@
     },
     {
       "include": "#punctuations"
+    },
+    {
+      "include": "#typeDeclaration"
+    },
+    {
+      "include": "#variableDeclaration"
+    },
+    {
+      "include": "#recordProperty"
     }
   ]
 }

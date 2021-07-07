@@ -35,18 +35,163 @@ src/SharedTypes.cmx : src/Utils.cmx src/Uri2.cmx src/Shared.cmx
 src/Uri2.cmx :
 src/Utils.cmx : src/Protocol.cmx
 src/vendor/Json.cmx :
+src/vendor/res_outcome_printer/reactjs_jsx_ppx_v3.cmx : \
+    src/vendor/res_outcome_printer/reactjs_jsx_ppx_v3.cmi
+src/vendor/res_outcome_printer/reactjs_jsx_ppx_v3.cmi :
+src/vendor/res_outcome_printer/res_ast_conversion.cmx : \
+    src/vendor/res_outcome_printer/res_printer.cmx \
+    src/vendor/res_outcome_printer/res_ast_conversion.cmi
+src/vendor/res_outcome_printer/res_ast_conversion.cmi :
+src/vendor/res_outcome_printer/res_ast_debugger.cmx : \
+    src/vendor/res_outcome_printer/res_driver.cmx \
+    src/vendor/res_outcome_printer/res_doc.cmx \
+    src/vendor/res_outcome_printer/res_ast_debugger.cmi
+src/vendor/res_outcome_printer/res_ast_debugger.cmi : \
+    src/vendor/res_outcome_printer/res_driver.cmi
+src/vendor/res_outcome_printer/res_cli.cmx : \
+    src/vendor/res_outcome_printer/res_driver_reason_binary.cmx \
+    src/vendor/res_outcome_printer/res_driver_ml_parser.cmx \
+    src/vendor/res_outcome_printer/res_driver_binary.cmx \
+    src/vendor/res_outcome_printer/res_driver.cmx \
+    src/vendor/res_outcome_printer/res_ast_debugger.cmx \
+    src/vendor/res_outcome_printer/reactjs_jsx_ppx_v3.cmx
 src/vendor/res_outcome_printer/res_comment.cmx : \
     src/vendor/res_outcome_printer/res_comment.cmi
 src/vendor/res_outcome_printer/res_comment.cmi :
+src/vendor/res_outcome_printer/res_comments_table.cmx : \
+    src/vendor/res_outcome_printer/res_parsetree_viewer.cmx \
+    src/vendor/res_outcome_printer/res_doc.cmx \
+    src/vendor/res_outcome_printer/res_comment.cmx
+src/vendor/res_outcome_printer/res_core.cmx : \
+    src/vendor/res_outcome_printer/res_token.cmx \
+    src/vendor/res_outcome_printer/res_scanner.cmx \
+    src/vendor/res_outcome_printer/res_printer.cmx \
+    src/vendor/res_outcome_printer/res_parser.cmx \
+    src/vendor/res_outcome_printer/res_js_ffi.cmx \
+    src/vendor/res_outcome_printer/res_grammar.cmx \
+    src/vendor/res_outcome_printer/res_doc.cmx \
+    src/vendor/res_outcome_printer/res_diagnostics.cmx \
+    src/vendor/res_outcome_printer/res_comments_table.cmx \
+    src/vendor/res_outcome_printer/res_core.cmi
+src/vendor/res_outcome_printer/res_core.cmi : \
+    src/vendor/res_outcome_printer/res_parser.cmi
+src/vendor/res_outcome_printer/res_diagnostics.cmx : \
+    src/vendor/res_outcome_printer/res_token.cmx \
+    src/vendor/res_outcome_printer/res_grammar.cmx \
+    src/vendor/res_outcome_printer/res_diagnostics_printing_utils.cmx \
+    src/vendor/res_outcome_printer/res_diagnostics.cmi
+src/vendor/res_outcome_printer/res_diagnostics.cmi : \
+    src/vendor/res_outcome_printer/res_token.cmx \
+    src/vendor/res_outcome_printer/res_grammar.cmx
+src/vendor/res_outcome_printer/res_diagnostics_printing_utils.cmx :
 src/vendor/res_outcome_printer/res_doc.cmx : \
     src/vendor/res_outcome_printer/res_minibuffer.cmx \
     src/vendor/res_outcome_printer/res_doc.cmi
 src/vendor/res_outcome_printer/res_doc.cmi :
+src/vendor/res_outcome_printer/res_driver.cmx : \
+    src/vendor/res_outcome_printer/res_printer.cmx \
+    src/vendor/res_outcome_printer/res_parser.cmx \
+    src/vendor/res_outcome_printer/res_io.cmx \
+    src/vendor/res_outcome_printer/res_diagnostics.cmx \
+    src/vendor/res_outcome_printer/res_core.cmx \
+    src/vendor/res_outcome_printer/res_comment.cmx \
+    src/vendor/res_outcome_printer/res_driver.cmi
+src/vendor/res_outcome_printer/res_driver.cmi : \
+    src/vendor/res_outcome_printer/res_diagnostics.cmi \
+    src/vendor/res_outcome_printer/res_comment.cmi
+src/vendor/res_outcome_printer/res_driver_binary.cmx : \
+    src/vendor/res_outcome_printer/res_driver.cmx \
+    src/vendor/res_outcome_printer/res_driver_binary.cmi
+src/vendor/res_outcome_printer/res_driver_binary.cmi : \
+    src/vendor/res_outcome_printer/res_driver.cmi
+src/vendor/res_outcome_printer/res_driver_ml_parser.cmx : \
+    src/vendor/res_outcome_printer/res_io.cmx \
+    src/vendor/res_outcome_printer/res_driver.cmx \
+    src/vendor/res_outcome_printer/res_comment.cmx \
+    src/vendor/res_outcome_printer/res_ast_conversion.cmx \
+    src/vendor/res_outcome_printer/res_driver_ml_parser.cmi
+src/vendor/res_outcome_printer/res_driver_ml_parser.cmi : \
+    src/vendor/res_outcome_printer/res_driver.cmi \
+    src/vendor/res_outcome_printer/res_comment.cmi
+src/vendor/res_outcome_printer/res_driver_reason_binary.cmx : \
+    src/vendor/res_outcome_printer/res_scanner.cmx \
+    src/vendor/res_outcome_printer/res_io.cmx \
+    src/vendor/res_outcome_printer/res_driver.cmx \
+    src/vendor/res_outcome_printer/res_comment.cmx \
+    src/vendor/res_outcome_printer/res_ast_conversion.cmx \
+    src/vendor/res_outcome_printer/res_driver_reason_binary.cmi
+src/vendor/res_outcome_printer/res_driver_reason_binary.cmi : \
+    src/vendor/res_outcome_printer/res_token.cmx \
+    src/vendor/res_outcome_printer/res_driver.cmi
+src/vendor/res_outcome_printer/res_grammar.cmx : \
+    src/vendor/res_outcome_printer/res_token.cmx
+src/vendor/res_outcome_printer/res_io.cmx : \
+    src/vendor/res_outcome_printer/res_io.cmi
+src/vendor/res_outcome_printer/res_io.cmi :
+src/vendor/res_outcome_printer/res_js_ffi.cmx :
 src/vendor/res_outcome_printer/res_minibuffer.cmx : \
     src/vendor/res_outcome_printer/res_minibuffer.cmi
 src/vendor/res_outcome_printer/res_minibuffer.cmi :
+src/vendor/res_outcome_printer/res_multi_printer.cmx : \
+    src/vendor/res_outcome_printer/res_printer.cmx \
+    src/vendor/res_outcome_printer/res_io.cmx \
+    src/vendor/res_outcome_printer/res_driver_reason_binary.cmx \
+    src/vendor/res_outcome_printer/res_driver_ml_parser.cmx \
+    src/vendor/res_outcome_printer/res_driver.cmx \
+    src/vendor/res_outcome_printer/res_diagnostics.cmx \
+    src/vendor/res_outcome_printer/res_ast_conversion.cmx \
+    src/vendor/res_outcome_printer/res_multi_printer.cmi
+src/vendor/res_outcome_printer/res_multi_printer.cmi :
 src/vendor/res_outcome_printer/res_outcome_printer.cmx : \
     src/vendor/res_outcome_printer/res_token.cmx \
-    src/vendor/res_outcome_printer/res_doc.cmx
+    src/vendor/res_outcome_printer/res_doc.cmx \
+    src/vendor/res_outcome_printer/res_outcome_printer.cmi
+src/vendor/res_outcome_printer/res_outcome_printer.cmi : \
+    src/vendor/res_outcome_printer/res_doc.cmi
+src/vendor/res_outcome_printer/res_parens.cmx : \
+    src/vendor/res_outcome_printer/res_parsetree_viewer.cmx \
+    src/vendor/res_outcome_printer/res_parens.cmi
+src/vendor/res_outcome_printer/res_parens.cmi :
+src/vendor/res_outcome_printer/res_parser.cmx : \
+    src/vendor/res_outcome_printer/res_token.cmx \
+    src/vendor/res_outcome_printer/res_scanner.cmx \
+    src/vendor/res_outcome_printer/res_reporting.cmx \
+    src/vendor/res_outcome_printer/res_grammar.cmx \
+    src/vendor/res_outcome_printer/res_diagnostics.cmx \
+    src/vendor/res_outcome_printer/res_comment.cmx \
+    src/vendor/res_outcome_printer/res_parser.cmi
+src/vendor/res_outcome_printer/res_parser.cmi : \
+    src/vendor/res_outcome_printer/res_token.cmx \
+    src/vendor/res_outcome_printer/res_scanner.cmi \
+    src/vendor/res_outcome_printer/res_reporting.cmx \
+    src/vendor/res_outcome_printer/res_grammar.cmx \
+    src/vendor/res_outcome_printer/res_diagnostics.cmi \
+    src/vendor/res_outcome_printer/res_comment.cmi
+src/vendor/res_outcome_printer/res_parsetree_viewer.cmx : \
+    src/vendor/res_outcome_printer/res_parsetree_viewer.cmi
+src/vendor/res_outcome_printer/res_parsetree_viewer.cmi :
+src/vendor/res_outcome_printer/res_printer.cmx : \
+    src/vendor/res_outcome_printer/res_token.cmx \
+    src/vendor/res_outcome_printer/res_parsetree_viewer.cmx \
+    src/vendor/res_outcome_printer/res_parens.cmx \
+    src/vendor/res_outcome_printer/res_doc.cmx \
+    src/vendor/res_outcome_printer/res_comments_table.cmx \
+    src/vendor/res_outcome_printer/res_comment.cmx \
+    src/vendor/res_outcome_printer/res_printer.cmi
+src/vendor/res_outcome_printer/res_printer.cmi : \
+    src/vendor/res_outcome_printer/res_doc.cmi \
+    src/vendor/res_outcome_printer/res_comments_table.cmx \
+    src/vendor/res_outcome_printer/res_comment.cmi
+src/vendor/res_outcome_printer/res_reporting.cmx : \
+    src/vendor/res_outcome_printer/res_token.cmx \
+    src/vendor/res_outcome_printer/res_grammar.cmx
+src/vendor/res_outcome_printer/res_scanner.cmx : \
+    src/vendor/res_outcome_printer/res_token.cmx \
+    src/vendor/res_outcome_printer/res_diagnostics.cmx \
+    src/vendor/res_outcome_printer/res_comment.cmx \
+    src/vendor/res_outcome_printer/res_scanner.cmi
+src/vendor/res_outcome_printer/res_scanner.cmi : \
+    src/vendor/res_outcome_printer/res_token.cmx \
+    src/vendor/res_outcome_printer/res_diagnostics.cmi
 src/vendor/res_outcome_printer/res_token.cmx : \
     src/vendor/res_outcome_printer/res_comment.cmx

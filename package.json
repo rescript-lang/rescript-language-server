@@ -88,6 +88,16 @@
 				"language": "rescript",
 				"scopeName": "source.rescript",
 				"path": "./grammars/rescript.tmLanguage.json"
+			},
+			{
+				"scopeName": "markdown.rescript.codeblock",
+				"path": "./grammars/rescript.markdown.json",
+				"injectTo": [
+					"text.html.markdown"
+				],
+				"embeddedLanguages": {
+					"meta.embedded.block.rescript": "rescript"
+				}
 			}
 		],
 		"languages": [
